@@ -1,13 +1,40 @@
 {
-  "pages":[
+  "pages": [
+    "pages/home/home",
+    "pages/list/list",
+    "pages/me/me",
     "pages/index/index",
     "pages/logs/logs"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "Weixin",
-    "navigationBarTextStyle":"black"
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#63bffc",
+    "navigationBarTitleText": "物流网点查询",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "selectedColor":"#367dfb",
+    "color":"#bfbfbf",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页",
+        "selectedIconPath":"./pages/images/home_s.png",
+        "iconPath":"./pages/images/home_n.png"
+      },
+      {
+        "pagePath": "pages/list/list",
+        "text": "列表",
+        "selectedIconPath":"./pages/images/list_s.png",
+        "iconPath":"./pages/images/list_n.png"
+      },
+      {
+        "pagePath": "pages/me/me",
+        "text": "个人",
+        "selectedIconPath":"./pages/images/me_s.png",
+        "iconPath":"./pages/images/me_n.png"
+      }
+    ]
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json"
