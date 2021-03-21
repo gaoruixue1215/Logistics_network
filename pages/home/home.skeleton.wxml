@@ -1,0 +1,22 @@
+<!--
+此文件为开发者工具生成，生成时间: 2021/3/5 下午4:51:01 
+使用方法：
+在 D:\my project\Logistics_network\pages\home\home.wxml 引入模板
+
+```
+<import src="home.skeleton.wxml"/>
+<template is="skeleton" wx-if="{{loading}}" />
+```
+
+在 D:\my project\Logistics_network\pages\home\home.wxss 中引入样式
+```
+@import "./home.skeleton.wxss";
+```
+
+更多详细信息可以参考文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/skeleton.html
+-->
+<template name="skeleton">
+  <view class="sk-container">
+    <text class="sk-transparent sk-text-14-2857-506 sk-text">pages/home/home.wxml</text>
+  </view>
+</template>

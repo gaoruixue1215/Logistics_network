@@ -1,2 +1,58 @@
 <!--pages/list/list.wxml-->
-<text>pages/list/list.wxml</text>
+<view class="logistics-point">
+    <view class="logistics-point-list">
+      <block wx:for="{{list}}" wx:key="menu_for">
+        <view class='content' bindtap="toExpInfo" data-item="{{item}}">
+          <!-- 网点 -->
+          <view class="exp-point">
+            <text class="exp-type">{{item.expText}}</text>
+            <text class="exp-point-name">{{item.name}}</text>
+          </view>
+          <!-- 地址 -->
+          <view class="exp-address exp-info">
+            <image class="exp-icon" src="../images/exp_address.png"></image>
+            <text>{{item.province}}{{item.city}}{{item.area}}{{item.address}}</text>
+          </view>
+          <!-- 联系 -->
+          <view wx:if="{{item.serviceTel}}" class="exp-tel exp-info">
+            <image class="exp-icon" src="../images/exp_tel.png"></image>
+            <text>{{item.serviceTel}}</text>
+          </view>
+          <!-- 时间 -->
+          <view wx:if="{{item.serviceTime}}" class="exp-time exp-info">
+            <image class="exp-icon" src="../images/exp_time.png"></image>
+            <text>{{item.serviceTime}}</text>
+          </view>
+        </view>
+        <!-- <text>{{item.serviceTel}}</text> -->
+        <!-- <view class="listtext">{{item.person}}</view>
+        <view class="listtext">{{item.address}}</view>
+        <view class="listtext">{{item.area}}</view>
+        <view class="listtext">{{item.city}}</view>
+        <view class="listtext">{{item.expText}}</view>
+        <view class="listtext">{{item.expType}}</view>
+        <view class="listtext">{{item.name}}</view>
+        <view class="listtext">{{item.province}}</view>
+        <view class="listtext">{{item.serviceArea}}</view>
+        <view class="listtext">{{item.serviceContent}}</view>
+        <view class="listtext">{{item.serviceTel}}</view>
+        <view class="listtext">{{item.serviceTime}}</view>
+        <view class="listtext">{{item.type}}</view>
+        <view class="listtext">{{item.lat}}</view>
+        <view class="listtext">{{item.lon}}</view> -->
+        <!-- <navigator url="{{item.url}}" class="lists">
+        <view class='content'>
+          <view class="listimg">
+            <image src="{{item.icon}}"></image>
+          </view>
+          <view class="listtext">{{item.text}}</view>
+          <view class="listicon">{{item.tips}}</view>
+          <view class="arrows">
+            <image src="{{item.arrows}}"></image>
+          </view>
+        </view>
+        </navigator> -->
+        <view class="div-line"></view>
+      </block>
+    </view>
+  </view>
