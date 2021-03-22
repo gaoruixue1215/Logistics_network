@@ -1,0 +1,27 @@
+<!--miniprogram/pages/exp-point-search/exp-point-search.wxml-->
+<view class="exp-point-search">
+  <view class="search-header">
+    <view class="header-cancel" bindtap="toExpPointList"  data-status="cancel">
+      <image src="../images/return.png" alt="cancel"></image>
+      <text>取消</text>
+    </view>
+    <view class="header-ok" bindtap="toExpPointList" data-status="ok">
+      <image src="../images/search.png" alt="ok"></image>
+      <text>确认</text>
+    </view>
+  </view>
+  <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+    <view class="picker-data">
+      <image src="../images/dingwei.png" alt="定位" ></image>
+      <text>|</text>
+      <view class="picker-search-data">
+        <text wx:if="{{!region[0] && !region[1] && !region[2]}}" class="search-default">请点击获取查询地址</text>
+        <text>{{region[0]}}</text>
+        <text wx:if="{{region[1]}}"> - </text>
+        <text>{{region[1]}}</text>
+        <text wx:if="{{region[2]}}"> - </text>
+        <text>{{region[2]}}</text>
+      </view>
+    </view>
+  </picker>
+</view>

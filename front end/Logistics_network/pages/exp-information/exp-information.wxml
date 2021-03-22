@@ -1,0 +1,5 @@
+<!--pages/exp-information/exp-information.wxml-->
+<text>{{info}}</text>
+<view>
+  <map class='map' latitude='{{latitude}}' longitude='{{longitude}}' scale='{{scale}}' markers='{{markers}}'/>
+</view>

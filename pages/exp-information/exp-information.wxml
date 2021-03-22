@@ -1,2 +1,0 @@
-<!--pages/exp-information/exp-information.wxml-->
-<text>{{info}}</text>

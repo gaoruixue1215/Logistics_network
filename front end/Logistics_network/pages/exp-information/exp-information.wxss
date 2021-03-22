@@ -1,0 +1,5 @@
+/* pages/exp-information/exp-information.wxss */
+.map{
+  width: 100%;
+  height: 500rpx;
+}

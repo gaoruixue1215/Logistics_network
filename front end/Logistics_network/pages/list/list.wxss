@@ -1,0 +1,107 @@
+/* pages/list/list.wxss */
+
+.logistics-point{
+  
+}
+/* 搜索头部 */
+.picker-data{
+  height: 25px;
+  border-width: 15rpx 25rpx;
+  border-color: #eee;
+  border-style: solid;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.picker-data .picker-location{
+  width:10%;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  border-right: 1px solid #eee;
+}
+.picker-data .picker-location image{
+  width: 25px;
+  height: 25px;
+}
+.picker-data .picker-search-data{
+  width: 75%;
+  padding: 0 15rpx;
+}
+.picker-data .to-search{
+  width: 15%;
+  height: 100%;
+  text-align: center;
+  line-height: 25px;
+  background: #eee;
+}
+.picker-data .picker-search-data .search-default{
+  color: #707070;
+}
+/* 空数据 */
+.empty-data{
+  width: 100%;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.empty-data image{
+  width: 160px;
+  height: 160px;
+}
+.empty-data view{
+  color:#ccc;
+}
+/* 物流网点列表 */
+.logistics-point-list{
+  padding:15rpx 0;
+  font-size: 12px;
+  line-height: 18px;
+}
+.content{
+  padding: 25rpx;
+  border-bottom: 1px solid #eee;
+}
+.content .exp-point{
+  display: flex;
+}
+.content .exp-point .exp-type{
+  color: #fff;
+  font-size: 12px;
+  background: #338cc7;
+  border-radius: 5rpx;
+  padding: 0 10rpx;
+  white-space: nowrap;
+}
+.content .exp-point .exp-point-name{
+  margin-left: 20rpx;
+  font-weight: 500;
+  font-size: 16px;
+  /* 超出一行 -> 省略 */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.content .exp-info{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 5rpx 0;
+}
+.content .exp-icon{
+  width: 16px;
+  height: 16px;
+  margin-right: 15rpx;
+}
+.content .exp-info text{
+  flex:1;
+}
+
+/*分割线样式*/
+.divLine{
+  background: #ddd;
+  width: 100%;
+  height: 5rpx;
+ }

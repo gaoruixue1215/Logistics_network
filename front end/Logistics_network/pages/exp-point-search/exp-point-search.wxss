@@ -1,0 +1,59 @@
+/* miniprogram/pages/exp-point-search/exp-point-search.wxss */
+.exp-point-search{
+
+}
+/* 搜索头部 */
+.search-header{
+  padding: 20rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.search-header view{
+  height:20px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.search-header view image{
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  margin: 0 10rpx;
+}
+.search-header view text{
+  color: #707070;
+  height: 20px;
+  font-size: 14px;
+  line-height: 20px;
+}
+.picker-data{
+  height: 25px;
+  border-width: 15rpx 25rpx;
+  border-color: #eee;
+  border-style: solid;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.picker-data .picker-location{
+  height: 25px;
+  margin: 0 15rpx;
+  display: flex;
+  align-items: center;
+}
+.picker-data image{
+  width: 25px;
+  height: 25px;
+  margin: 0 15rpx;
+}
+.picker-data .picker-search-data{
+  margin: 0 15rpx;
+}
+.picker-data .picker-search-data .search-default{
+  color: #707070;
+}
+/* .picker-data text{
+  height: 25px;
+  line-height: 25px;
+} */

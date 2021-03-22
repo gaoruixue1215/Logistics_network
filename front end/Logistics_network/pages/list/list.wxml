@@ -1,0 +1,80 @@
+<!--pages/list/list.wxml-->
+<view class="logistics-point">
+  <!-- <div bindtap="toExpPointSearch">搜索</div> -->
+  <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+    <view class="picker-data">
+      <view class="picker-location" catchtap="getUserLocation">
+      <!-- <view class="picker-location" catchtap="getLocation"> -->
+        <image src="../images/dingwei.png" alt="定位" ></image>
+      </view>
+      <view class="picker-search-data">
+        <text wx:if="{{!region[0] && !region[1] && !region[2]}}" class="search-default">请点击获取查询地址</text>
+        <text>{{region[0]}}</text>
+        <text wx:if="{{region[1]}}"> - </text>
+        <text>{{region[1]}}</text>
+        <text wx:if="{{region[2]}}"> - </text>
+        <text>{{region[2]}}</text>
+      </view>
+      <view class="to-search" catchtap="toSearch">查询</view>
+    </view>
+  </picker>
+  <view wx:if="{{!list.length}}" class="empty-data">
+    <image src="../images/empty.png" alt="空状态"></image>
+    <view>没有数据</view>
+  </view>
+  <view class="logistics-point-list">
+    <block wx:for="{{list}}" wx:key="menu_for">
+      <view class='content' bindtap="toExpInfo" data-item="{{item}}">
+        <!-- 网点 -->
+        <view class="exp-point">
+          <text class="exp-type">{{item.expText}}</text>
+          <text class="exp-point-name">{{item.name}}</text>
+        </view>
+        <!-- 地址 -->
+        <view class="exp-address exp-info">
+          <image class="exp-icon" src="../images/exp_address.png"></image>
+          <text>{{item.province}}{{item.city}}{{item.area}}{{item.address}}</text>
+        </view>
+        <!-- 联系 -->
+        <view wx:if="{{item.serviceTel}}" class="exp-tel exp-info">
+          <image class="exp-icon" src="../images/exp_tel.png"></image>
+          <text>{{item.serviceTel}}</text>
+        </view>
+        <!-- 时间 -->
+        <view wx:if="{{item.serviceTime}}" class="exp-time exp-info">
+          <image class="exp-icon" src="../images/exp_time.png"></image>
+          <text>{{item.serviceTime}}</text>
+        </view>
+      </view>
+      <!-- <text>{{item.serviceTel}}</text> -->
+      <!-- <view class="listtext">{{item.person}}</view>
+      <view class="listtext">{{item.address}}</view>
+      <view class="listtext">{{item.area}}</view>
+      <view class="listtext">{{item.city}}</view>
+      <view class="listtext">{{item.expText}}</view>
+      <view class="listtext">{{item.expType}}</view>
+      <view class="listtext">{{item.name}}</view>
+      <view class="listtext">{{item.province}}</view>
+      <view class="listtext">{{item.serviceArea}}</view>
+      <view class="listtext">{{item.serviceContent}}</view>
+      <view class="listtext">{{item.serviceTel}}</view>
+      <view class="listtext">{{item.serviceTime}}</view>
+      <view class="listtext">{{item.type}}</view>
+      <view class="listtext">{{item.lat}}</view>
+      <view class="listtext">{{item.lon}}</view> -->
+      <!-- <navigator url="{{item.url}}" class="lists">
+      <view class='content'>
+        <view class="listimg">
+          <image src="{{item.icon}}"></image>
+        </view>
+        <view class="listtext">{{item.text}}</view>
+        <view class="listicon">{{item.tips}}</view>
+        <view class="arrows">
+          <image src="{{item.arrows}}"></image>
+        </view>
+      </view>
+      </navigator> -->
+      <view class="div-line"></view>
+    </block>
+  </view>
+</view>
